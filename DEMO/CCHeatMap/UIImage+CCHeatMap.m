@@ -1,9 +1,5 @@
-//
-//  CCHeatImage.m
-//  MCompass
-//
 //  Created by Songwen Ding on 6/3/16.
-//  Copyright © 2016 Songwen Ding. All rights reserved.
+//  Copyright © 2016 DingSoung. All rights reserved.
 //
 
 #import "UIImage+CCHeatMap.h"
