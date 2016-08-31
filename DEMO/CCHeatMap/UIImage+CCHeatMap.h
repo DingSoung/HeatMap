@@ -1,10 +1,5 @@
-//
-//  CCHeatImage.h
-//  MCompass
-//
 //  Created by Songwen Ding on 6/3/16.
-//  Copyright © 2016 Songwen Ding. All rights reserved.
-//
+//  Copyright © 2016 DingSoung. All rights reserved.
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
@@ -13,12 +8,7 @@
 
 /**
  Generates a heat map image for the specified rectangle.
- 
- There should be a one-to-one correspondence between the location and weight
- elements.
- A nil weight parameter implies an even weight distribution.
- 
- @params
+
  @rect: region frame
  boost: heat boost value
  points: array of NSValue CGPoint objects representing the data points
@@ -26,9 +16,6 @@
  point
  weightsAdjustmentEnabled: set YES for weight balancing and normalization
  groupingEnabled: set YES for tighter visual grouping of dense areas
- 
- @returns
- UIImage object representing the heatmap for the specified region.
  */
 + (UIImage *)heatMapWithRect:(CGRect)rect
                        boost:(float)boost
