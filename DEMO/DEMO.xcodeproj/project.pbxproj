@@ -15,9 +15,9 @@
 		CE7895171D0576EB00DE64A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7895151D0576EB00DE64A3 /* LaunchScreen.storyboard */; };
 		CE7895221D0576EB00DE64A3 /* DEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7895211D0576EB00DE64A3 /* DEMOTests.m */; };
 		CE78952D1D0576EB00DE64A3 /* DEMOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE78952C1D0576EB00DE64A3 /* DEMOUITests.m */; };
-		CE78953F1D05791600DE64A3 /* UIImage+CCHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE78953E1D05791600DE64A3 /* UIImage+CCHeatMap.m */; };
 		CE7895411D057B3100DE64A3 /* quake.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE7895401D057B3100DE64A3 /* quake.plist */; };
 		CE7895431D05961600DE64A3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7895421D05961600DE64A3 /* MapKit.framework */; };
+		CE82B3C81E129FD10016B5C3 /* UIImage+HeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = CE82B3C71E129FD10016B5C3 /* UIImage+HeatMap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +54,10 @@
 		CE7895281D0576EB00DE64A3 /* DEMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DEMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE78952C1D0576EB00DE64A3 /* DEMOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMOUITests.m; sourceTree = "<group>"; };
 		CE78952E1D0576EB00DE64A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE78953D1D05790E00DE64A3 /* UIImage+CCHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CCHeatMap.h"; sourceTree = "<group>"; };
-		CE78953E1D05791600DE64A3 /* UIImage+CCHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CCHeatMap.m"; sourceTree = "<group>"; };
 		CE7895401D057B3100DE64A3 /* quake.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quake.plist; sourceTree = "<group>"; };
 		CE7895421D05961600DE64A3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CE82B3C61E129FD10016B5C3 /* UIImage+HeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HeatMap.h"; sourceTree = "<group>"; };
+		CE82B3C71E129FD10016B5C3 /* UIImage+HeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HeatMap.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				CE7895421D05961600DE64A3 /* MapKit.framework */,
-				CE78953A1D0576FF00DE64A3 /* CCHeatMap */,
 				CE7895061D0576EB00DE64A3 /* DEMO */,
 				CE7895201D0576EB00DE64A3 /* DEMOTests */,
 				CE78952B1D0576EB00DE64A3 /* DEMOUITests */,
@@ -111,6 +110,7 @@
 		CE7895061D0576EB00DE64A3 /* DEMO */ = {
 			isa = PBXGroup;
 			children = (
+				CE82B3C51E129FD10016B5C3 /* HeatMap */,
 				CE78950A1D0576EB00DE64A3 /* AppDelegate.h */,
 				CE78950B1D0576EB00DE64A3 /* AppDelegate.m */,
 				CE78950D1D0576EB00DE64A3 /* ViewController.h */,
@@ -151,13 +151,14 @@
 			path = DEMOUITests;
 			sourceTree = "<group>";
 		};
-		CE78953A1D0576FF00DE64A3 /* CCHeatMap */ = {
+		CE82B3C51E129FD10016B5C3 /* HeatMap */ = {
 			isa = PBXGroup;
 			children = (
-				CE78953E1D05791600DE64A3 /* UIImage+CCHeatMap.m */,
-				CE78953D1D05790E00DE64A3 /* UIImage+CCHeatMap.h */,
+				CE82B3C61E129FD10016B5C3 /* UIImage+HeatMap.h */,
+				CE82B3C71E129FD10016B5C3 /* UIImage+HeatMap.m */,
 			);
-			path = CCHeatMap;
+			name = HeatMap;
+			path = ../../HeatMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +228,7 @@
 				TargetAttributes = {
 					CE7895031D0576EB00DE64A3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = C6989DMQ59;
 					};
 					CE78951C1D0576EB00DE64A3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -291,10 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE82B3C81E129FD10016B5C3 /* UIImage+HeatMap.m in Sources */,
 				CE78950F1D0576EB00DE64A3 /* ViewController.m in Sources */,
 				CE78950C1D0576EB00DE64A3 /* AppDelegate.m in Sources */,
 				CE7895091D0576EB00DE64A3 /* main.m in Sources */,
-				CE78953F1D05791600DE64A3 /* UIImage+CCHeatMap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -425,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,7 +440,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C6989DMQ59;
 				INFOPLIST_FILE = DEMO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DingSoung.DEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -451,7 +455,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = C6989DMQ59;
 				INFOPLIST_FILE = DEMO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DingSoung.DEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,6 +529,7 @@
 				CE7895331D0576EB00DE64A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7895341D0576EB00DE64A3 /* Build configuration list for PBXNativeTarget "DEMOTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +538,7 @@
 				CE7895361D0576EB00DE64A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE7895371D0576EB00DE64A3 /* Build configuration list for PBXNativeTarget "DEMOUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +547,7 @@
 				CE7895391D0576EB00DE64A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

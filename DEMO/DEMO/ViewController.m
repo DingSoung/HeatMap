@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIImage+CCHeatMap.h"
+#import "UIImage+HeatMap.h"
 
 @interface ViewController () <MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

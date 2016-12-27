@@ -2,7 +2,7 @@
 //  Copyright © 2016 DingSoung. All rights reserved.
 //
 
-#import "UIImage+CCHeatMap.h"
+#import "UIImage+HeatMap.h"
 
 @implementation  UIImage( CCHeatMap )
 
